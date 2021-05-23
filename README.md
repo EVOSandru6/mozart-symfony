@@ -7,7 +7,7 @@
 Start console script
 ```
 sudo docker run --rm -v ${PWD}/manager:/app --workdir=/app php:8.0.6-cli ls
-sudo docker run --rm -v ${PWD}/manager:/app --workdir=/app php:8.0.6-cli php bin/index.php
+sudo docker run --rm -v ${PWD}/manager:/app --workdir=/app php:8.0.6-cli php bin/app.php
 ```
 
 Start web script
@@ -20,7 +20,7 @@ Docker build
 ```
 sudo docker build --file=manager/Dockerfile --tag manager-php-cli manager
 sudo docker run --rm manager-php-cli
-sudo docker run --rm manager-php-cli php bin/index.php
+sudo docker run --rm manager-php-cli php bin/app.php
 ```
 
 ## Check ports
