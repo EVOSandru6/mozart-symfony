@@ -12,8 +12,15 @@ sudo docker run --rm -v ${PWD}/manager:/app --workdir=/app php:8.0.6-cli php bin
 
 Start web script
 ```
-sudo docker run --rm -v ${PWD}/manager/public:/var/www/html -p 8080:80 php:8.0.6-apache
+sudo sudo docker run --rm -v ${PWD}/manager/public:/var/www/html -p 8080:80 php:8.0.6-apache
 curl http://localhost:8080
+```
+
+Docker build
+```
+sudo docker build --file=manager/Dockerfile --tag manager-php-cli manager
+sudo docker run --rm manager-php-cli
+sudo docker run --rm manager-php-cli php bin/index.php
 ```
 
 ## Check ports
