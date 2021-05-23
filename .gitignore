@@ -1,0 +1,7 @@
+.idea
+xxx
+vendor
+*_bak
+**/_bak
+*.bak
+**/.bak
