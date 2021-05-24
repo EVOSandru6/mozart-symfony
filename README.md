@@ -23,6 +23,11 @@ sudo docker run --rm manager-php-cli
 sudo docker run --rm manager-php-cli php bin/app.php
 ```
 
+Before deploy production
+```
+REGISTRY_ADDRESS=registry IMAGE_TAG=0 make build-production
+```
+
 ### Docker install
 ```sudo apt-get remove -y docker docker-engine docker.io containerd runc;```
 

@@ -1,3 +1,6 @@
+up: docker-up
+init: docker-down docker-pull docker-build docker-up
+
 docker-up:
 	sudo docker-compose up -d
 
