@@ -28,6 +28,11 @@ Before deploy production
 REGISTRY_ADDRESS=registry IMAGE_TAG=0 make build-production
 ```
 
+Install slim into cli container
+```
+sudo docker-compose run --rm manager-php-cli composer require slim/slim
+```
+
 ### Docker install
 ```sudo apt-get remove -y docker docker-engine docker.io containerd runc;```
 
