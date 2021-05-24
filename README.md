@@ -31,6 +31,8 @@ REGISTRY_ADDRESS=registry IMAGE_TAG=0 make build-production
 Install slim into cli container
 ```
 sudo docker-compose run --rm manager-php-cli composer require slim/slim
+sudo docker-compose run --rm manager-php-cli composer install
+sudo docker-compose run --rm manager-php-cli composer dump-autoload
 ```
 
 ### Docker install
