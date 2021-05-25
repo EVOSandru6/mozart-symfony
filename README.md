@@ -43,6 +43,11 @@ sudo rm -rf manager/skeleton
 make perm _PERM_USER=$USER
 ```
 
+Test
+```
+sudo docker-compose run --rm manager-php-cli php bin/phpunit
+```
+
 ### Docker install
 ```sudo apt-get remove -y docker docker-engine docker.io containerd runc;```
 
