@@ -1,5 +1,5 @@
 up: docker-up
-init: docker-down docker-pull docker-build docker-up
+init: docker-down docker-pull docker-build docker-up manager-init
 
 docker-up:
 	sudo docker-compose up -d
@@ -12,6 +12,11 @@ docker-pull:
 
 docker-build:
 	sudo docker-compose build
+
+manager-init: manager-composer-install
+
+manager-composer-install:
+	sudo docker-compose run --rm manager-php-cli composer install
 
 cli:
 	sudo docker-compose run --rm manager-php-cli php bin/app.php
