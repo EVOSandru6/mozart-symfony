@@ -38,6 +38,9 @@ sudo docker-compose run --rm manager-php-cli composer dump-autoload
 Install skeleton
 ```
 sudo docker-compose run --rm manager-php-cli composer create-project symfony/website-skeleton skeleton
+sudo mv manager/skeleton/.* manager/
+sudo rm -rf manager/skeleton
+make perm _PERM_USER=$USER
 ```
 
 ### Docker install

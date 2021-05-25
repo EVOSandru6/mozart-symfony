@@ -1,3 +1,7 @@
+_APP_PATH=manager
+_PERM_USER=$$USER
+_SUDO=sudo
+
 up: docker-up
 init: docker-down-clear docker-pull docker-build docker-up manager-init
 
@@ -41,5 +45,9 @@ deploy-production:
 	ssh ${PRODUCTION_HOST} -p ${PRODUCTION_PORT} 'docker-compose pull'
 	ssh ${PRODUCTION_HOST} -p ${PRODUCTION_PORT} 'docker-compose build -d'
 
-
-
+perm:
+	echo 'user-$(_PERM_USER)';
+	$(_SUDO) chown -f -R $(_PERM_USER):$(_PERM_USER) $(_APP_PATH);
+	$(_SUDO) find $(_APP_PATH) -type f -exec chmod 644 {} \;
+	$(_SUDO) find $(_APP_PATH) -type d -exec chmod 755 {} \;
+	$(_SUDO) chgrp -f -R $(_PERM_USER) $(_APP_PATH)/vendor;
