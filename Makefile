@@ -1,11 +1,14 @@
 up: docker-up
-init: docker-down docker-pull docker-build docker-up manager-init
+init: docker-down-clear docker-pull docker-build docker-up manager-init
 
 docker-up:
 	sudo docker-compose up -d
 
 docker-down:
 	sudo docker-compose down --remove-orphans
+
+docker-down-clear:
+	sudo docker-compose down -v --remove-orphans
 
 docker-pull:
 	sudo docker-compose pull

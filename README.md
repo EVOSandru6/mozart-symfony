@@ -35,6 +35,11 @@ sudo docker-compose run --rm manager-php-cli composer install
 sudo docker-compose run --rm manager-php-cli composer dump-autoload
 ```
 
+Install skeleton
+```
+sudo docker-compose run --rm manager-php-cli composer create-project symfony/website-skeleton skeleton
+```
+
 ### Docker install
 ```sudo apt-get remove -y docker docker-engine docker.io containerd runc;```
 
