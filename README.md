@@ -1,5 +1,14 @@
 # Mozart symfony test project
 
+## TODO
+* See environments options
+* phpunit  environment force
+* symfony recipes repo ( manifests )
+* symfony recipes server site
+* symfony flex package
+* доверенные прокси, доверенные хосты
+* bundles - symfony modules ( с пулом окружений )
+
 ## Docker
 
 ### Docker tricks
