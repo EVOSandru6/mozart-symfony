@@ -57,6 +57,12 @@ Test
 sudo docker-compose run --rm manager-php-cli php bin/phpunit
 ```
 
+Doctrine
+* Unit of work
+* Identity map
+* persist for create only
+* flush chunks
+
 ### Docker install
 ```sudo apt-get remove -y docker docker-engine docker.io containerd runc;```
 
