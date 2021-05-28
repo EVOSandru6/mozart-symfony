@@ -58,6 +58,12 @@ Test
 sudo docker-compose run --rm manager-php-cli php bin/phpunit
 ```
 
+Doctrine
+* Unit of work
+* Identity map
+* persist for create only
+* flush chunks
+
 Варианты с маршрутами
 * RoutingConfigurator
 * Аннотации
