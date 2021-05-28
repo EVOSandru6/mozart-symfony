@@ -11,6 +11,7 @@ docker-up:
 docker-down:
 	sudo docker-compose down --remove-orphans
 
+# удаление только системных томов
 docker-down-clear:
 	sudo docker-compose down -v --remove-orphans
 
@@ -38,6 +39,7 @@ push-production:
 	sudo docker push ${REGISTRY_ADDRESS}/manager-php-fpm:${IMAGE_TAG}
 	sudo docker push ${REGISTRY_ADDRESS}/manager-php-cli:${IMAGE_TAG}
 
+# Убрать проверку по хосту: -o StrictHostKeyChecking=no
 deploy-production:
 	ssh ${PRODUCTION_HOST} -p ${PRODUCTION_PORT} 'rm -rf docker-compose.yml .env'
 	scp -P ${PRODUCTION_PORT} docker-compose.yml ${PRODUCTION_HOST}:docker-compose.yml
