@@ -63,6 +63,8 @@ Doctrine
 * Identity map
 * persist for create only
 * flush chunks
+* migration:diff
+* migration:migrate
 
 Варианты с маршрутами
 * RoutingConfigurator
