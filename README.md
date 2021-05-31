@@ -66,6 +66,35 @@ Doctrine
 * migration:diff
 * migration:migrate
 
+Symfony profiler
+
+Raw sql for getters
+
+null://localhost
+mailhog - test mailer
+
+role_hierarchy
+access control
+custom user provider
+
+UserInterface, EquatableInterface
+
+doctrine fixtures bundle
+
+inverseOf('name')
+
+hydration
+
+Warning migrations watcher
+
+Dom web crawler
+
+knpu oauth client bundle
+
+oauth2-client
+
+symfony webpack encore
+
 Варианты с маршрутами
 * RoutingConfigurator
 * Аннотации
